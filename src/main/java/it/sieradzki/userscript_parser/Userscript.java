@@ -13,6 +13,10 @@ import java.util.Set;
  */
 public class Userscript {
 
+	public static final String OPENING_TAG = "==UserScript==";
+
+	public static final String CLOSING_TAG = "==/UserScript==";
+
 	private String description;
 
 	private URL downloadUrl;
