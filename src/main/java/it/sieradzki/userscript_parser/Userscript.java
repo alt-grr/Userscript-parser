@@ -1,11 +1,12 @@
 package it.sieradzki.userscript_parser;
 
+import it.sieradzki.userscript_parser.metadata.ApiFunction;
 import it.sieradzki.userscript_parser.metadata.ExecuteRules;
-import it.sieradzki.userscript_parser.metadata.GrantedApi;
 import it.sieradzki.userscript_parser.metadata.RunAt;
 import it.sieradzki.userscript_parser.metadata.Version;
 
 import java.net.URL;
+import java.util.EnumSet;
 import java.util.Set;
 
 /**
@@ -28,7 +29,7 @@ public class Userscript {
 	private ExecuteRules executeRules;
 
 	// @grant
-	private GrantedApi grantedApi;
+	private Set<ApiFunction> grantedApiFunctions = EnumSet.noneOf(ApiFunction.class);
 
 	// @icon
 	private URL icon;
