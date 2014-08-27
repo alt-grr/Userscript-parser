@@ -7,6 +7,7 @@ import it.sieradzki.userscript_parser.metadata.Version;
 
 import java.net.URL;
 import java.util.EnumSet;
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -41,7 +42,7 @@ public class Userscript {
 	private String namespace;
 
 	// @require
-	private Set<URL> require;
+	private Set<URL> require = new HashSet<URL>();
 
 	// @run-at
 	private RunAt runAt;
