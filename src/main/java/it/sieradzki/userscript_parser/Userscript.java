@@ -10,6 +10,7 @@ import java.util.Set;
 
 /**
  * @see <a href="http://wiki.greasespot.net/Metadata_Block">Metadata Block specification</a>
+ * @see <a href="http://wiki.greasespot.net/@grant">@grant specification</a>
  */
 public class Userscript {
 
@@ -17,27 +18,39 @@ public class Userscript {
 
 	public static final String CLOSING_TAG = "==/UserScript==";
 
+	// @description
 	private String description;
 
+	// @downloadURL
 	private URL downloadUrl;
 
+	// @include + @match, @exclude
 	private ExecuteRules executeRules;
 
+	// @grant
 	private GrantedApi grantedApi;
 
+	// @icon
 	private URL icon;
 
+	// @name
 	private String name;
 
+	// @namespace
 	private String namespace;
 
-	private URL updateUrl;
-
+	// @require
 	private Set<URL> require;
 
+	// @run-at
 	private RunAt runAt;
 
+	// @updateURL
+	private URL updateUrl;
+
+	// @version
 	private Version version;
 
+	// Source code of userscript
 	private String code;
 }
