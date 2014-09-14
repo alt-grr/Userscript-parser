@@ -17,13 +17,13 @@ public class Version implements Comparable<Version> {
 
 	private static class Part implements Comparable<Part> {
 
-		private Integer number1;
+		private Integer numberA;
 
-		private String string1;
+		private String stringB;
 
-		private Integer number2;
+		private Integer numberC;
 
-		private String string2;
+		private String stringD;
 
 		@Override
 		public int compareTo(Part o) {
