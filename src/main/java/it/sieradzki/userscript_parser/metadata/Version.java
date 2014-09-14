@@ -12,7 +12,16 @@ public class Version implements Comparable<Version> {
 
 	@Override
 	public int compareTo(Version o) {
-		return 0;
+
+		for (int i = 0; i < Math.min(versionParts.length, o.versionParts.length); i++) {
+
+			int comparedPartResult = versionParts[i].compareTo(o.versionParts[i]);
+			if (comparedPartResult != 0) {
+				return comparedPartResult;
+			}
+		}
+
+		return versionParts.length - o.versionParts.length;
 	}
 
 	private static class Part implements Comparable<Part> {
