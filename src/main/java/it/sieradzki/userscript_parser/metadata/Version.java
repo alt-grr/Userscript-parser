@@ -36,7 +36,25 @@ public class Version implements Comparable<Version> {
 
 		@Override
 		public int compareTo(Part o) {
-			return 0;
+
+			int comparedFieldResult;
+
+			comparedFieldResult = numberA.compareTo(o.numberA);
+			if (comparedFieldResult != 0) {
+				return comparedFieldResult;
+			}
+
+			comparedFieldResult = stringB.compareTo(o.stringB);
+			if (comparedFieldResult != 0) {
+				return comparedFieldResult;
+			}
+
+			comparedFieldResult = numberC.compareTo(o.numberC);
+			if (comparedFieldResult != 0) {
+				return comparedFieldResult;
+			}
+
+			return numberA.compareTo(o.numberA);
 		}
 	}
 }
